@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Song = require('./models/Song');
+const Song = require('./models/Song.js');
 
 mongoose.connect('mongodb://localhost/songsterr_clone', {
   useNewUrlParser: true,
