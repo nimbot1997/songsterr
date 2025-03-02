@@ -1,4 +1,5 @@
 name: Resolve Issue with OpenHands
+
 on:
   issues:
     types: [labeled]
@@ -18,15 +19,15 @@ permissions:
 
 jobs:
   call-openhands-resolver:
-    uses: nimishchaudhari/OpenHands/.github/workflows/openhands-resolver.yml@main
+    uses: All-Hands-AI/OpenHands/.github/workflows/openhands-resolver.yml@main
     with:
       macro: ${{ vars.OPENHANDS_MACRO || '@openhands-agent' }}
       max_iterations: ${{ fromJson(vars.OPENHANDS_MAX_ITER || 50) }}
       base_container_image: ${{ vars.OPENHANDS_BASE_CONTAINER_IMAGE || '' }}
-      LLM_MODEL: ${{ vars.LLM_MODEL || 'deepseek/deepseek-reasoner' }}
-      target_branch: ${{ vars.TARGET_BRANCH || 'dev' }}
+      LLM_MODEL: ${{ vars.LLM_MODEL || 'anthropic/claude-3-5-sonnet-20241022' }}
+      target_branch: ${{ vars.TARGET_BRANCH || 'main' }}
     secrets:
       PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       PAT_USERNAME: ${{ secrets.PAT_USERNAME }}
       LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL }}
+      LLM_BASE_URL: ${{ secrets.LLM_BASE_URL || '' }}
