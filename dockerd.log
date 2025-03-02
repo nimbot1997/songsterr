@@ -1,0 +1,104 @@
+time="2025-03-02T13:00:14.315373295Z" level=info msg="Starting up"
+time="2025-03-02T13:00:14.315702061Z" level=warning msg="Error while setting daemon root propagation, this is not generally critical but may cause some functionality to not work or fallback to less desirable behavior" dir=/var/lib/docker error="could not setup daemon root propagation to shared: mount /var/lib/docker:/var/lib/docker, flags: 0x1000: operation not permitted"
+time="2025-03-02T13:00:14.316698169Z" level=info msg="libcontainerd: started new containerd process" pid=2045
+time="2025-03-02T13:00:14.316753373Z" level=info msg="[core] parsed scheme: \"unix\"" module=grpc
+time="2025-03-02T13:00:14.316765957Z" level=info msg="[core] scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2025-03-02T13:00:14.316798017Z" level=info msg="[core] ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+time="2025-03-02T13:00:14.316806843Z" level=info msg="[core] ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2025-03-02T13:00:14.316812504Z" level=info msg="[core] Channel switches to new LB policy \"pick_first\"" module=grpc
+time="2025-03-02T13:00:14.316844674Z" level=info msg="[core] Subchannel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.316879990Z" level=info msg="[core] Subchannel picks a new address \"unix:///var/run/docker/containerd/containerd.sock\" to connect" module=grpc
+time="2025-03-02T13:00:14.317062652Z" level=info msg="[core] Channel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14Z" level=warning msg="containerd config version `1` has been deprecated and will be removed in containerd v2.0, please switch to version `2`, see https://github.com/containerd/containerd/blob/main/docs/PLUGINS.md#version-header"
+time="2025-03-02T13:00:14.330433748Z" level=info msg="starting containerd" revision="1.6.20~ds1-1+b1" version="1.6.20~ds1"
+time="2025-03-02T13:00:14.339152826Z" level=info msg="loading plugin \"io.containerd.content.v1.content\"..." type=io.containerd.content.v1
+time="2025-03-02T13:00:14.339238908Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.aufs\"..." type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339352812Z" level=info msg="skip loading plugin \"io.containerd.snapshotter.v1.aufs\"..." error="aufs is not supported (modprobe aufs failed: exec: \"modprobe\": executable file not found in $PATH \"\"): skip plugin" type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339400361Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.btrfs\"..." type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339539201Z" level=info msg="skip loading plugin \"io.containerd.snapshotter.v1.btrfs\"..." error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.btrfs (overlay) must be a btrfs filesystem to be used with the btrfs snapshotter: skip plugin" type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339551184Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.devmapper\"..." type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339573135Z" level=warning msg="failed to load plugin io.containerd.snapshotter.v1.devmapper" error="devmapper not configured"
+time="2025-03-02T13:00:14.339580969Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.native\"..." type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339604373Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.overlayfs\"..." type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339737303Z" level=info msg="loading plugin \"io.containerd.snapshotter.v1.zfs\"..." type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339874660Z" level=info msg="skip loading plugin \"io.containerd.snapshotter.v1.zfs\"..." error="path /var/lib/docker/containerd/daemon/io.containerd.snapshotter.v1.zfs must be a zfs filesystem to be used with the zfs snapshotter: skip plugin" type=io.containerd.snapshotter.v1
+time="2025-03-02T13:00:14.339886562Z" level=info msg="loading plugin \"io.containerd.metadata.v1.bolt\"..." type=io.containerd.metadata.v1
+time="2025-03-02T13:00:14.339911439Z" level=warning msg="could not use snapshotter devmapper in metadata plugin" error="devmapper not configured"
+time="2025-03-02T13:00:14.339918953Z" level=info msg="metadata content store policy set" policy=shared
+time="2025-03-02T13:00:14.340023058Z" level=info msg="loading plugin \"io.containerd.differ.v1.walking\"..." type=io.containerd.differ.v1
+time="2025-03-02T13:00:14.340038217Z" level=info msg="loading plugin \"io.containerd.event.v1.exchange\"..." type=io.containerd.event.v1
+time="2025-03-02T13:00:14.340047394Z" level=info msg="loading plugin \"io.containerd.gc.v1.scheduler\"..." type=io.containerd.gc.v1
+time="2025-03-02T13:00:14.340066129Z" level=info msg="loading plugin \"io.containerd.service.v1.introspection-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340088752Z" level=info msg="loading plugin \"io.containerd.service.v1.containers-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340107296Z" level=info msg="loading plugin \"io.containerd.service.v1.content-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340126573Z" level=info msg="loading plugin \"io.containerd.service.v1.diff-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340150548Z" level=info msg="loading plugin \"io.containerd.service.v1.images-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340161358Z" level=info msg="loading plugin \"io.containerd.service.v1.leases-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340170836Z" level=info msg="loading plugin \"io.containerd.service.v1.namespaces-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340180053Z" level=info msg="loading plugin \"io.containerd.service.v1.snapshots-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340189020Z" level=info msg="loading plugin \"io.containerd.runtime.v1.linux\"..." type=io.containerd.runtime.v1
+time="2025-03-02T13:00:14.340286372Z" level=info msg="loading plugin \"io.containerd.runtime.v2.task\"..." type=io.containerd.runtime.v2
+time="2025-03-02T13:00:14.340353108Z" level=info msg="loading plugin \"io.containerd.monitor.v1.cgroups\"..." type=io.containerd.monitor.v1
+time="2025-03-02T13:00:14.340609829Z" level=info msg="loading plugin \"io.containerd.service.v1.tasks-service\"..." type=io.containerd.service.v1
+time="2025-03-02T13:00:14.340629807Z" level=info msg="loading plugin \"io.containerd.grpc.v1.introspection\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.340659683Z" level=info msg="loading plugin \"io.containerd.internal.v1.restart\"..." type=io.containerd.internal.v1
+time="2025-03-02T13:00:14.340897789Z" level=info msg="loading plugin \"io.containerd.grpc.v1.containers\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.340924399Z" level=info msg="loading plugin \"io.containerd.grpc.v1.content\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.340946561Z" level=info msg="loading plugin \"io.containerd.grpc.v1.diff\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.340966588Z" level=info msg="loading plugin \"io.containerd.grpc.v1.events\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.340985955Z" level=info msg="loading plugin \"io.containerd.grpc.v1.healthcheck\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341006333Z" level=info msg="loading plugin \"io.containerd.grpc.v1.images\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341024908Z" level=info msg="loading plugin \"io.containerd.grpc.v1.leases\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341043092Z" level=info msg="loading plugin \"io.containerd.grpc.v1.namespaces\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341069000Z" level=info msg="loading plugin \"io.containerd.internal.v1.opt\"..." type=io.containerd.internal.v1
+time="2025-03-02T13:00:14.341157256Z" level=info msg="loading plugin \"io.containerd.grpc.v1.snapshots\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341331048Z" level=info msg="loading plugin \"io.containerd.grpc.v1.tasks\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341426086Z" level=info msg="loading plugin \"io.containerd.grpc.v1.version\"..." type=io.containerd.grpc.v1
+time="2025-03-02T13:00:14.341764320Z" level=info msg=serving... address=/var/run/docker/containerd/containerd-debug.sock
+time="2025-03-02T13:00:14.341876050Z" level=info msg=serving... address=/var/run/docker/containerd/containerd.sock.ttrpc
+time="2025-03-02T13:00:14.341957883Z" level=info msg=serving... address=/var/run/docker/containerd/containerd.sock
+time="2025-03-02T13:00:14.341971289Z" level=info msg="containerd successfully booted in 0.012854s"
+time="2025-03-02T13:00:14.347948440Z" level=info msg="[core] Subchannel Connectivity change to READY" module=grpc
+time="2025-03-02T13:00:14.347986421Z" level=info msg="[core] Channel Connectivity change to READY" module=grpc
+time="2025-03-02T13:00:14.350289795Z" level=info msg="[core] parsed scheme: \"unix\"" module=grpc
+time="2025-03-02T13:00:14.350313209Z" level=info msg="[core] scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2025-03-02T13:00:14.350338206Z" level=info msg="[core] ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+time="2025-03-02T13:00:14.350348516Z" level=info msg="[core] ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2025-03-02T13:00:14.350354456Z" level=info msg="[core] Channel switches to new LB policy \"pick_first\"" module=grpc
+time="2025-03-02T13:00:14.350377399Z" level=info msg="[core] Subchannel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.350404049Z" level=info msg="[core] Subchannel picks a new address \"unix:///var/run/docker/containerd/containerd.sock\" to connect" module=grpc
+time="2025-03-02T13:00:14.350462004Z" level=info msg="[core] Channel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.350633676Z" level=info msg="[core] Subchannel Connectivity change to READY" module=grpc
+time="2025-03-02T13:00:14.350652261Z" level=info msg="[core] Channel Connectivity change to READY" module=grpc
+time="2025-03-02T13:00:14.351106316Z" level=info msg="[core] parsed scheme: \"unix\"" module=grpc
+time="2025-03-02T13:00:14.351117086Z" level=info msg="[core] scheme \"unix\" not registered, fallback to default scheme" module=grpc
+time="2025-03-02T13:00:14.351136453Z" level=info msg="[core] ccResolverWrapper: sending update to cc: {[{unix:///var/run/docker/containerd/containerd.sock  <nil> 0 <nil>}] <nil> <nil>}" module=grpc
+time="2025-03-02T13:00:14.351143646Z" level=info msg="[core] ClientConn switching balancer to \"pick_first\"" module=grpc
+time="2025-03-02T13:00:14.351149477Z" level=info msg="[core] Channel switches to new LB policy \"pick_first\"" module=grpc
+time="2025-03-02T13:00:14.351174965Z" level=info msg="[core] Subchannel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.351211894Z" level=info msg="[core] Subchannel picks a new address \"unix:///var/run/docker/containerd/containerd.sock\" to connect" module=grpc
+time="2025-03-02T13:00:14.351236541Z" level=info msg="[core] Channel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.351494801Z" level=info msg="[core] Subchannel Connectivity change to READY" module=grpc
+time="2025-03-02T13:00:14.351531761Z" level=info msg="[core] Channel Connectivity change to READY" module=grpc
+time="2025-03-02T13:00:14.352667714Z" level=error msg="failed to mount overlay: operation not permitted" storage-driver=overlay2
+time="2025-03-02T13:00:14.352713160Z" level=error msg="exec: \"fuse-overlayfs\": executable file not found in $PATH" storage-driver=fuse-overlayfs
+time="2025-03-02T13:00:14.352845969Z" level=error msg="AUFS was not found in /proc/filesystems" storage-driver=aufs
+time="2025-03-02T13:00:14.353498322Z" level=error msg="failed to mount overlay: operation not permitted" storage-driver=overlay
+time="2025-03-02T13:00:14.354184369Z" level=warning msg="Unable to setup quota: operation not permitted\n"
+time="2025-03-02T13:00:14.357484951Z" level=info msg="Loading containers: start."
+time="2025-03-02T13:00:14.359122892Z" level=info msg="unable to detect if iptables supports xlock: 'iptables --wait -L -n': `iptables v1.8.9 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)`" error="exit status 4"
+time="2025-03-02T13:00:14.377535484Z" level=info msg="[core] Channel Connectivity change to SHUTDOWN" module=grpc
+time="2025-03-02T13:00:14.377566913Z" level=info msg="[core] Subchannel Connectivity change to SHUTDOWN" module=grpc
+time="2025-03-02T13:00:14.377696319Z" level=info msg="stopping event stream following graceful shutdown" error="<nil>" module=libcontainerd namespace=moby
+time="2025-03-02T13:00:14.377966918Z" level=info msg="stopping healthcheck following graceful shutdown" module=libcontainerd
+time="2025-03-02T13:00:14.377989360Z" level=info msg="[core] Channel Connectivity change to SHUTDOWN" module=grpc
+time="2025-03-02T13:00:14.377999248Z" level=info msg="[core] Subchannel Connectivity change to SHUTDOWN" module=grpc
+time="2025-03-02T13:00:14.377983518Z" level=info msg="stopping event stream following graceful shutdown" error="context canceled" module=libcontainerd namespace=plugins.moby
+time="2025-03-02T13:00:14.378268763Z" level=info msg="[core] Subchannel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.378321699Z" level=info msg="[core] Channel Connectivity change to CONNECTING" module=grpc
+time="2025-03-02T13:00:14.378341710Z" level=info msg="[core] Subchannel picks a new address \"unix:///var/run/docker/containerd/containerd.sock\" to connect" module=grpc
+time="2025-03-02T13:00:15.378901698Z" level=warning msg="[core] grpc: addrConn.createTransport failed to connect to {unix:///var/run/docker/containerd/containerd.sock localhost <nil> 0 <nil>}. Err: connection error: desc = \"transport: Error while dialing dial unix:///var/run/docker/containerd/containerd.sock: timeout\". Reconnecting..." module=grpc
+time="2025-03-02T13:00:15.378946963Z" level=info msg="[core] Subchannel Connectivity change to TRANSIENT_FAILURE" module=grpc
+time="2025-03-02T13:00:15.378976588Z" level=info msg="[core] Channel Connectivity change to TRANSIENT_FAILURE" module=grpc
+failed to start daemon: Error initializing network controller: error obtaining controller instance: failed to create NAT chain DOCKER: iptables failed: iptables -t nat -N DOCKER: iptables v1.8.9 (nf_tables): Could not fetch rule set generation id: Permission denied (you must be root)
+ (exit status 4)
